@@ -1,0 +1,84 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #c2ded1;
+  font-family: "Poppins";
+}
+
+#navbar {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+#navbar .nav-link {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+#navbar .nav-link:hover {
+  color: #354259;
+}
+
+#navbar .navbar-brand {
+  color: #354259;
+  font-size: 1.5rem;
+}
+
+.navbar.scrolled {
+  background-color: #cfd29c;
+}
+
+#title-head {
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+.blurb h2 {
+  color: #354259;
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+
+.blurb p {
+  color: #3f4e4f;
+  font-weight: 100;
+  font-size: 1.125rem;
+  line-height: 2;
+}
+
+.content {
+  margin-top: 2em;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+  #title-head h1 {
+    font-weight: 100;
+    font-size: 3rem;
+  }
+}
+
+/* CSS tambahan untuk penyesuaian pada layar mobile */
+@media (max-width: 767px) {
+  /* Mengurangi margin dan padding pada Navbar */
+  #navbar {
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Menyesuaikan margin pada judul dan tombol toggle */
+  #title-head {
+    margin-top: 50px;
+  }
+
+  .navbar-toggler {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Museum</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Logo Website -->
+  <link rel="icon" type="image/svg+xml" href="Img/logo.svg">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
+    <div class=" container-fluid">
+      <a class="navbar-brand" href="#">Museum</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#ticket">Ticket</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section -->
+  <section class="container-fluid px-0">
+    <div class="row align-items-center content" id="home">
+      <div class="col-lg-6 px-0">
+        <div class="text-#390000 text-center d-none d-lg-block" id="title-head">
+          <h1>MUSEUM DINOSOUR</h1>
+          <h1>MUSEUM DINOSOUR</h1>
+          <h1>MUSEUM DINOSOUR</h1>
+          <h1>MUSEUM DINOSOUR</h1>
+          <h1>MUSEUM DINOSOUR</h1>
+          <h1>MUSEUM DINOSOUR</h1>
+        </div>
+      </div>
+
+      <div class="col-lg-6 px-0">
+        <img class="img-fluid" src="Img/museum.png" title="Museum" alt="museum-icon">
+      </div>
+    </div>
+
+    <div class="row align-items-center content" id="about">
+      <div class="col-md-6 order-2 order-md-1">
+        <img class="img-fluid" src="Img/dino1.png" title="Tyrex" alt="dino-icon-1">
+      </div>
+
+      <div class="col-md-6 text-center order-1">
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-8 blurb pt-3">
+            <h2>Museum Of Ark</h2>
+            <img src="Img/fossil.png" height="60" title="Fossil" alt="fossil-icon" class="d-none d-lg-inline">
+            <p class="lead">
+              Embark on a journey through time at the Museum of Ark, where the wonders of prehistoric life come to life.
+              Our museum is
+              a captivating exploration into the world of dinosaurs and ancient civilizations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center content" id="ticket">
+      <div class="col-md-6 order-2 order-md-1">
+        <img class="img-fluid" src="Img/dino2.png" title="Mamooth" alt="dino-icon-2">
+      </div>
+
+      <div class="col-md-6 text-center">
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-8 blurb pt-3 pb-5">
+            <h2>Get Your Ticket</h2>
+            <h3>Admission Prices :</h3>
+            <div class="container mb-2" style="max-width: 10em; text-align: left;">
+              <div class="row row-cols-2">
+                <div class="col">Adults</div>
+                <div class="col">$15.00</div>
+                <div class="col">Children</div>
+                <div class="col">$8.00</div>
+                <div class="col">Seniors</div>
+                <div class="col">$10.00</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-lg">Contact Us for Tickets</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- Jquery Cdn -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script>
+    $(function () {
+      $(document).scroll(function () {
+        let $nav = $("#navbar");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+      });
+    }); 
+  </script>
+
+  <!-- JavaScript -->
+  <script>
+    $(document).ready(function () {
+      $(document).on('click touchstart', function (e) {
+        var container = $("#navbarNavAltMarkup, .navbar-toggler");
+
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          $(".navbar-collapse").collapse('hide');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
